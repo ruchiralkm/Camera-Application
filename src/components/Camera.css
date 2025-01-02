@@ -1,0 +1,174 @@
+.camera-container {
+  @apply relative w-full min-h-screen overflow-hidden bg-black;
+}
+
+.camera-view {
+  @apply relative w-full h-full;
+}
+
+.main-canvas {
+  @apply object-cover w-full h-full;
+}
+
+.camera-overlay {
+  @apply absolute inset-0 flex flex-col justify-between p-4;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Top Controls */
+.top-controls {
+  @apply flex items-center justify-between w-full;
+}
+
+.control-btn {
+  @apply flex items-center justify-center w-12 h-12 text-white transition-all duration-300 rounded-full bg-black/30 backdrop-blur-sm hover:bg-black/50;
+}
+
+/* Bottom Controls */
+.bottom-controls {
+  @apply flex items-center justify-between w-full px-8 pb-8;
+}
+
+.main-controls {
+  @apply flex items-center gap-8;
+}
+
+/* Shutter Button */
+.shutter-btn {
+  @apply relative flex items-center justify-center w-20 h-20 transition-transform duration-200 border-4 border-white rounded-full hover:scale-105 active:scale-95;
+}
+
+.shutter-inner {
+  @apply w-16 h-16 transition-all duration-200 bg-white rounded-full;
+}
+
+.shutter-btn:active .shutter-inner {
+  @apply w-14 h-14;
+}
+
+/* Timer and Flip Buttons */
+.timer-btn,
+.flip-btn {
+  @apply flex items-center justify-center text-xl text-white transition-all duration-300 rounded-full w-14 h-14 bg-black/40 backdrop-blur-sm hover:bg-black/60;
+}
+
+/* Filter Menu */
+.filter-menu {
+  @apply absolute left-0 w-full transition-all duration-300 ease-out transform bottom-32 bg-black/70 backdrop-blur-md;
+  height: 120px;
+}
+
+.filter-menu-open {
+  @apply translate-y-0;
+}
+
+.filter-scroll {
+  @apply flex gap-4 p-4 overflow-x-auto snap-x snap-mandatory;
+  scrollbar-width: none;
+}
+
+.filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-option {
+  @apply flex flex-col items-center snap-center;
+  min-width: 80px;
+}
+
+.filter-option img {
+  @apply object-cover w-16 h-16 transition-all duration-200 border-2 border-transparent rounded-lg;
+}
+
+.filter-option.active img {
+  @apply border-white;
+}
+
+.filter-option span {
+  @apply mt-2 text-sm text-white;
+}
+
+.filter-icon {
+  @apply mt-1 text-lg;
+}
+
+/* Flash Effect */
+.flash-effect {
+  @apply absolute inset-0 pointer-events-none bg-white/80 animate-flash;
+}
+
+/* Countdown Display */
+.countdown-display {
+  @apply absolute inset-0 flex items-center justify-center font-bold text-white text-8xl animate-pulse;
+}
+
+/* Gallery Button */
+.gallery-btn {
+  @apply w-12 h-12 overflow-hidden rounded-lg;
+}
+
+.preview-thumbnail {
+  @apply w-full h-full bg-gray-800 border-2 border-white/50;
+}
+
+/* Animations */
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-flash {
+  animation: flash 0.3s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 640px) {
+  .main-canvas {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .bottom-controls {
+    @apply max-w-2xl mx-auto;
+  }
+
+  .filter-menu {
+    @apply max-w-2xl mx-auto rounded-t-2xl;
+  }
+}
+
+/* Additional Visual Enhancements */
+.control-btn i,
+.timer-btn i,
+.flip-btn i {
+  @apply drop-shadow-lg;
+}
+
+.filter-toggle-btn {
+  @apply flex items-center justify-center w-12 h-12 text-xl text-white transition-all duration-300 rounded-full bg-black/40 backdrop-blur-sm hover:bg-black/60;
+}
+
+/* Mode Selector */
+.mode-selector {
+  @apply absolute flex p-1 transform -translate-x-1/2 rounded-full top-20 left-1/2 bg-black/40 backdrop-blur-sm;
+}
+
+.mode-option {
+  @apply px-4 py-2 text-sm text-white transition-all duration-200 rounded-full;
+}
+
+.mode-option.active {
+  @apply text-black bg-white;
+}

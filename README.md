@@ -7,7 +7,7 @@ This is a Vue.js-based camera app that allows users to apply various filters to 
 ## Features
 
 - **Live Camera Feed**: Captures and displays real-time video from the user's camera.
-- **Filters**: Apply different visual effects like Sepia, Vivid Colors, and more.
+- **Filters**: Apply different visual effects like Sepia, Vivid Colors and more.
 - **Countdown Timer**: Take pictures after a 5-second countdown.
 - **Switch Camera**: Toggle between the front and rear cameras (on supported devices).
 - **Capture and Save**: Take snapshots and download the image as a PNG file.
@@ -24,7 +24,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ruchiralkm/Camera-Application.git
+https://github.com/ruchiralkm/Camera-Application.git
 ```
 
 ```bash

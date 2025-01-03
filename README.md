@@ -4,6 +4,8 @@
 
 This is a Vue.js-based camera app that allows users to apply various filters to their camera feed, take pictures, and switch between the front and rear cameras. The app uses WebRTC API for video streaming and HTML5 Canvas for real-time image processing and effects.
 
+Live preview 👉 https://vuejscameraapp.netlify.app/
+
 ## Features
 
 - **Live Camera Feed**: Captures and displays real-time video from the user's camera.
